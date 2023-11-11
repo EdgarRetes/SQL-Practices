@@ -1,0 +1,11 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+To get the average of energy, valence and danceability to set the mood, I would write:
+SELECT AVG((energy+valence+danceability)/3) from songs;
+This takes the average of each column and then the average for the three columns, and just as the
+situation suggets, the averages of these values return the mood.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+I think that just three values don't completely define the mood. Using more columns for the average
+would help to define the better for the mood. Besides energy, valence and danceability, I would include
+the tempo and the loudness. Addionaly, the key used for the song creates a tone generally, so the number
+of the key can also help to identify what is the overall mood.
